@@ -1,24 +1,7 @@
 
 import { SyntheticEvent } from "react"
 import { pokemonTypes } from "src/services/utils/PokemonType"
-// import BugPokemon from "src/assets/Images/pokemonTypes/bug.svg"
-// import dark from "src/assets/Images/pokemonTypes/dark.svg"
-// import dragon from "src/assets/Images/pokemonTypes/dragon.svg"
-// import BugPokemon from "src/assets/Images/pokemonTypes/bug.svg"
-// import BugPokemon from "src/assets/Images/pokemonTypes/bug.svg"
-// import BugPokemon from "src/assets/Images/pokemonTypes/bug.svg"
-// import BugPokemon from "src/assets/Images/pokemonTypes/bug.svg"
-// import BugPokemon from "src/assets/Images/pokemonTypes/bug.svg"
-// import BugPokemon from "src/assets/Images/pokemonTypes/bug.svg"
-// import BugPokemon from "src/assets/Images/pokemonTypes/bug.svg"
-// import BugPokemon from "src/assets/Images/pokemonTypes/bug.svg"
 
-// const svgPaths: { [key: string]: string } = {
-//     Bug: 'src/assets/Images/pokemonTypes/bug.svg',
-//     Dark: 'src/assets/Images/pokemonTypes/dark.svg',
-//     Dragon: 'src/assets/Images/pokemonTypes/dragon.svg',
-//     // Add other key-value pairs...
-// };
 type PokemonTypeProps = {
     type: string;
     tabIndex: boolean;
@@ -30,7 +13,7 @@ export const PokemonType = (props: PokemonTypeProps) => {
         (item) => item.name === props.type
     );
 
-    { console.log(color, "color") }
+
     return name && color ? (
 
 

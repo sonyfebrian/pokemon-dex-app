@@ -3,6 +3,7 @@ import { Pokemon } from "src/services/utils/types/Pokemon"
 import { SearchFilter } from "src/components/SearchFilter"
 import { SocialMedia } from "src/components/ui/SosialMedia"
 
+
 type SearchBarProps = {
     setPokemonList: (data: Pokemon[]) => void;
     pokemonAmount: number;
@@ -28,6 +29,7 @@ export const Header = (props: SearchBarProps) => {
                 setShowPagination={props.setShowPagination}
                 setDisabledButton={props.setDisabledButton}
             /><SocialMedia /></div>
+
             {/* <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
 
                 <img src={PokemonLogo} alt="logo-navbar" />
