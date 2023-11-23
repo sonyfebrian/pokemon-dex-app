@@ -45,7 +45,11 @@ export default function UsePagination(props: UsePaginationProps) {
                         children = <span className="block py-3 px-0.75rem font-Montserrat font-semibold text-white">...</span>;
                     } else if (type === "page") {
                         children = (
-                            <Button {...item} selected={selected} >
+                            <Button {...item} selected={selected} onClick={(event) => {
+                                if (page !== null) {
+                                    handleChange(event, page);
+                                }
+                            }} >
                                 {page}
                             </Button>
                         );

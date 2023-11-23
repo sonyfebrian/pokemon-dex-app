@@ -46,20 +46,20 @@ export const Pokedex = (props: PokedexProps) => {
 
 
                             </div>
-
+                            {props.pokemonList.length > 1 &&
+                                props.loading === false &&
+                                props.showPagination === true && (
+                                    <UsePagination
+                                        setPokemonList={props.setPokemonList}
+                                        setLoading={props.setLoading}
+                                        searchBarRef={props.searchBarRef}
+                                        page={props.page}
+                                        setPage={props.setPage}
+                                    />
+                                )}
                         </div>
                     )}
-                    {props.pokemonList.length > 1 &&
-                        props.loading === false &&
-                        props.showPagination === true && (
-                            <UsePagination
-                                setPokemonList={props.setPokemonList}
-                                setLoading={props.setLoading}
-                                searchBarRef={props.searchBarRef}
-                                page={props.page}
-                                setPage={props.setPage}
-                            />
-                        )}
+
 
                 </div>
             </>

@@ -4,7 +4,7 @@ interface ButtonProps {
     navigation?: boolean;
     selected?: boolean;
     disabled?: boolean;
-
+    onClick?: React.MouseEventHandler<HTMLButtonElement>;
     children?: ReactNode;
 }
 
@@ -13,20 +13,20 @@ const Button: React.FC<ButtonProps> = ({
     selected,
     disabled,
     children,
-
+    onClick
 }) => {
     const buttonClasses = `
-    font-Montserrat font-semibold text-white rounded-md 
+     font-semibold text-white rounded-md 
     flex justify-center items-center
-    ${navigation ? 'w-12 h-12' : 'w-16 h-16'}
-    ${selected ? 'bg-2F5AFF' : ''}
+    ${navigation ? 'w-8 h-8' : 'w-10 h-10'}
+    ${selected ? 'bg-[#2F5AFF]' : ''}
     ${navigation ? 'border-none' : ''}
-    ${!navigation && !selected ? 'border-1 border-white' : ''}
+    ${!navigation && !selected ? 'border border-white ' : ''}
     ${disabled ? 'pointer-events-none opacity-50' : ''}
   `;
 
     return (
-        <button className={buttonClasses} disabled={disabled}>
+        <button className={buttonClasses} disabled={disabled} onClick={onClick}>
             {children}
         </button>
     );

@@ -39,12 +39,6 @@ export const PokemonCard = (props: PokemonCardProps) => {
 
         <>
 
-            {/* <div className=" bg-gray-100 bg-opacity-75 px-8 pt-16 pb-24 rounded-lg  text-center relative">  <div className="flex justify-center w-full">
-                <div className="relative">
-                    <img src={imgUrl} alt="" className="-ml-20 align-middle absolute -m-36    max-w-[200px]" />
-                </div>
-            </div></div> */}
-
 
             <div className="relative w-full mb-32 mt-5 group max-w-md min-w-0 mx-auto break-words border md:max-w-sm rounded-3xl bg-gray-800">
 
