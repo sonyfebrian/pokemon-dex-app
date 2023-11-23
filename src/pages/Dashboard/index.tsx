@@ -3,6 +3,7 @@ import { Header } from "src/Layouts/Header"
 import { Pokedex } from "src/components/Pokedex";
 import { Pokemon } from "src/services/utils/types/Pokemon";
 import { getPokemonList } from "src/services/utils/api/getPokemonList";
+import { PokemonModal } from "src/components/ui/Modal";
 
 
 const Dashboard = () => {
@@ -18,7 +19,7 @@ const Dashboard = () => {
     // const searchBarRef = useRef<HTMLDivElement>(null);
     const searchBarRef = useRef<HTMLDivElement>(null) as MutableRefObject<HTMLDivElement>;
 
-    console.log(error, loading, page, showPagination, setModal, "cek state")
+
     useEffect(() => {
         (async () => {
             setLoading(true);
@@ -40,7 +41,7 @@ const Dashboard = () => {
     }, [pokemonList]);
 
 
-    console.log(pokemonData, "data pokemon")
+
     return (
         <>
             <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-700 via-blue-800 to-gray-900">  <Header setPokemonList={setPokemonList}
@@ -53,7 +54,10 @@ const Dashboard = () => {
                 disabledButton={disabledButton}
                 setDisabledButton={setDisabledButton}
                 searchBarRef={searchBarRef} />
+                {pokemonData && modal && (
+                    <PokemonModal setModal={setModal} pokemonData={pokemonData} />
 
+                )}
                 <Pokedex
                     setModal={setModal}
                     setPokemonData={setPokemonData}
@@ -70,7 +74,10 @@ const Dashboard = () => {
                     setShowPagination={setShowPagination}
                     searchBarRef={searchBarRef}
                     disabledButton={disabledButton}
-                /></div>
+                />
+
+
+            </div>
 
         </>
     )
