@@ -30,22 +30,7 @@ export const Header = (props: SearchBarProps) => {
                 setDisabledButton={props.setDisabledButton}
             /><SocialMedia /></div>
 
-            {/* <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
 
-                <img src={PokemonLogo} alt="logo-navbar" />
-                <nav className="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
-                    <SearchFilter
-                        setPokemonList={props.setPokemonList}
-                        pokemonAmount={props.pokemonAmount}
-                        setPokemonAmount={props.setPokemonAmount}
-                        setLoading={props.setLoading}
-                        setShowPagination={props.setShowPagination}
-                        setDisabledButton={props.setDisabledButton}
-                    />
-                </nav>
-
-                <div className="inline-flex  py-1 px-3  mt-4 md:mt-0"> <SocialMedia /></div>
-            </div> */}
         </header></>
     )
 }

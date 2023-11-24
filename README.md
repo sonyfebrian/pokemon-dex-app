@@ -1,30 +1,82 @@
-# React + TypeScript + Vite
+## Installation
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Prerequisites
 
-Currently, two official plugins are available:
+- Node.js (v14.x or later)
+- npm or yarn
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Steps
 
-## Expanding the ESLint configuration
+Clone the repository:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+```bash
+git clone https://github.com/your-username/your-project.git
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Navigate to the project directory:
+
+```bash
+ cd your-project
+```
+
+Install dependencies using npm:
+
+```bash
+npm install
+```
+
+Or if you prefer using yarn:
+
+```bash
+yarn install
+```
+
+### Running the Application
+
+To start the development server:
+
+```bash
+npm run dev
+```
+
+Or
+
+```bash
+yarn dev
+```
+
+This will run the application in development mode. Open http://localhost:5173 in your browser to view it.
+
+### Running Unit Tests
+
+This project uses Vite Test for unit testing.
+
+To run the unit tests:
+
+```bash
+npm run test
+```
+
+or
+
+```bash
+yarn test
+```
+
+This command will execute the test suites and display the test results in the console.
+
+### Building for Production
+
+To build the app for production:
+
+```bash
+npm run build
+```
+
+or
+
+```bash
+yarn build
+```
+
+This will generate an optimized production build in the dist directory.
