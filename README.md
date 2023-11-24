@@ -1,3 +1,7 @@
+### Deployed Application
+
+View the deployed application [here](https://pokemon-dex-app-eight.vercel.app/)
+
 ## Installation
 
 ### Prerequisites
